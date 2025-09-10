@@ -1,1 +1,1 @@
-AltanaX MCN v2 with contact info and logos.
+Full styled landing page with Tailwind, multilingual i18n, logos and contact info.
