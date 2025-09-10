@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AltanaX MCN — 与创作者一起成长 · 让生意更简单" />
+  <title>AltanaX MCN</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass{background:rgba(255,255,255,.06);backdrop-filter:saturate(120%) blur(8px)}
+    .grad{background:linear-gradient(180deg,#0a1027 0%,#0b1f4a 100%)}
+    .btn{border-radius:16px;padding:.75rem 1.25rem;font-weight:600}
+  </style>
+</head>
+<body class="text-white grad min-h-screen">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 border-b border-white/10 glass">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-blue-500 to-purple-400 grid place-items-center shadow-lg">🚀</div>
+        <span class="font-semibold tracking-wide">AltanaX MCN</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-white/80">
+        <a href="#services" class="hover:text-white" data-i="nav.services"></a>
+        <a href="#creators" class="hover:text-white" data-i="nav.creators"></a>
+        <a href="#brands" class="hover:text-white" data-i="nav.brands"></a>
+        <a href="#cases" class="hover:text-white" data-i="nav.cases"></a>
+        <a href="#process" class="hover:text-white" data-i="nav.process"></a>
+        <a href="#contact" class="hover:text-white" data-i="nav.contact"></a>
+      </nav>
+      <div class="flex items-center gap-1 bg-white/10 rounded-2xl p-1">
+        <button class="px-3 py-1 rounded-2xl text-sm" onclick="setLang('th')">TH</button>
+        <button class="px-3 py-1 rounded-2xl text-sm" onclick="setLang('zh')">ZH</button>
+        <button class="px-3 py-1 rounded-2xl text-sm" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 opacity-30 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/40 via-purple-500/20 to-transparent"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight" data-i="hero.title"></h1>
+        <p class="mt-4 text-white/80 md:text-lg" data-i="hero.desc"></p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#contact" class="btn bg-white text-[#0b122f]" data-i="ctaPrimary"></a>
+          <a href="#services" class="btn bg-white/10 hover:bg-white/20" data-i="ctaSecondary"></a>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-5 text-white/70 text-sm">
+          <span class="inline-flex items-center gap-2">✅ KPI Ready</span>
+          <span class="inline-flex items-center gap-2">👥 TH · MY · CN</span>
+          <span class="inline-flex items-center gap-2">📈 Data‑Driven</span>
+        </div>
+      </div>
+      <div>
+        <div class="p-1 rounded-3xl bg-gradient-to-r from-cyan-400 to-indigo-400 shadow-2xl">
+          <div class="rounded-3xl bg-[#0b122f] p-6 md:p-8">
+            <div class="grid grid-cols-3 gap-3 md:gap-4">
+              <div class="aspect-video rounded-2xl bg-white/5 border border-white/10 grid place-items-center text-white/50 text-xs">Media</div>
+              <div class="aspect-video rounded-2xl bg-white/5 border border-white/10 grid place-items-center text-white/50 text-xs">Media</div>
+              <div class="aspect-video rounded-2xl bg-white/5 border border-white/10 grid place-items-center text-white/50 text-xs">Media</div>
+              <div class="aspect-video rounded-2xl bg-white/5 border border-white/10 grid place-items-center text-white/50 text-xs">Media</div>
+              <div class="aspect-video rounded-2xl bg-white/5 border border-white/10 grid place-items-center text-white/50 text-xs">Media</div>
+              <div class="aspect-video rounded-2xl bg-white/5 border border-white/10 grid place-items-center text-white/50 text-xs">Media</div>
+            </div>
+            <p class="mt-4 text-white/70 text-sm">替换为你的达人/品牌图片或短视频封面</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="max-w-6xl mx-auto px-4 py-16 md:py-20">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-2xl bg-white/10 grid place-items-center">⭐</div>
+      <h2 class="text-2xl md:text-3xl font-bold" data-i="services.title"></h2>
+    </div>
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <div class="glass border border-white/10 rounded-2xl p-5">
+        <div class="font-semibold" data-i="services.items.0.title"></div>
+        <div class="text-white/80 mt-1" data-i="services.items.0.desc"></div>
+      </div>
+      <div class="glass border border-white/10 rounded-2xl p-5">
+        <div class="font-semibold" data-i="services.items.1.title"></div>
+        <div class="text-white/80 mt-1" data-i="services.items.1.desc"></div>
+      </div>
+      <div class="glass border border-white/10 rounded-2xl p-5">
+        <div class="font-semibold" data-i="services.items.2.title"></div>
+        <div class="text-white/80 mt-1" data-i="services.items.2.desc"></div>
+      </div>
+      <div class="glass border border-white/10 rounded-2xl p-5">
+        <div class="font-semibold" data-i="services.items.3.title"></div>
+        <div class="text-white/80 mt-1" data-i="services.items.3.desc"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATORS -->
+  <section id="creators" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-2xl bg-white/10 grid place-items-center">👤</div>
+      <h2 class="text-2xl md:text-3xl font-bold" data-i="creators.title"></h2>
+    </div>
+    <ul class="mt-6 grid md:grid-cols-2 gap-4 text-white/85">
+      <li>✅ <span data-i="creators.bullets.0"></span></li>
+      <li>✅ <span data-i="creators.bullets.1"></span></li>
+      <li>✅ <span data-i="creators.bullets.2"></span></li>
+      <li>✅ <span data-i="creators.bullets.3"></span></li>
+    </ul>
+  </section>
+
+  <!-- BRANDS -->
+  <section id="brands" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-2xl bg-white/10 grid place-items-center">🤝</div>
+      <h2 class="text-2xl md:text-3xl font-bold" data-i="brands.title"></h2>
+    </div>
+    <p class="text-white/75 mt-2" data-i="brands.desc"></p>
+    <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="h-16 rounded-xl bg-white/5 border border-white/10 grid place-items-center text-white/40 text-sm">Brand</div>
+      <div class="h-16 rounded-xl bg-white/5 border border-white/10 grid place-items-center text-white/40 text-sm">Brand</div>
+      <div class="h-16 rounded-xl bg-white/5 border border-white/10 grid place-items-center text-white/40 text-sm">Brand</div>
+      <div class="h-16 rounded-xl bg-white/5 border border-white/10 grid place-items-center text-white/40 text-sm">Brand</div>
+    </div>
+  </section>
+
+  <!-- CASES -->
+  <section id="cases" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-2xl bg-white/10 grid place-items-center">📈</div>
+      <h2 class="text-2xl md:text-3xl font-bold" data-i="cases.title"></h2>
+    </div>
+    <div class="mt-6 grid md:grid-cols-3 gap-4">
+      <div class="text-center glass border border-white/10 rounded-2xl p-5">
+        <div class="text-3xl font-bold" data-i="cases.cards.0.kpi"></div>
+        <div class="text-white/80" data-i="cases.cards.0.label"></div>
+        <div class="text-white/60 text-sm mt-1" data-i="cases.cards.0.note"></div>
+      </div>
+      <div class="text-center glass border border-white/10 rounded-2xl p-5">
+        <div class="text-3xl font-bold" data-i="cases.cards.1.kpi"></div>
+        <div class="text-white/80" data-i="cases.cards.1.label"></div>
+        <div class="text-white/60 text-sm mt-1" data-i="cases.cards.1.note"></div>
+      </div>
+      <div class="text-center glass border border-white/10 rounded-2xl p-5">
+        <div class="text-3xl font-bold" data-i="cases.cards.2.kpi"></div>
+        <div class="text-white/80" data-i="cases.cards.2.label"></div>
+        <div class="text-white/60 text-sm mt-1" data-i="cases.cards.2.note"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-2xl bg-white/10 grid place-items-center">🌐</div>
+      <h2 class="text-2xl md:text-3xl font-bold" data-i="process.title"></h2>
+    </div>
+    <div class="mt-8 grid md:grid-cols-4 gap-4">
+      <div class="relative glass border border-white/10 rounded-2xl p-5">
+        <div class="absolute -top-3 -left-3 w-10 h-10 rounded-2xl bg-white/10 grid place-items-center font-semibold">1</div>
+        <div class="font-semibold" data-i="process.steps.0.title"></div>
+        <div class="text-white/70 text-sm mt-1" data-i="process.steps.0.desc"></div>
+      </div>
+      <div class="relative glass border border-white/10 rounded-2xl p-5">
+        <div class="absolute -top-3 -left-3 w-10 h-10 rounded-2xl bg-white/10 grid place-items-center font-semibold">2</div>
+        <div class="font-semibold" data-i="process.steps.1.title"></div>
+        <div class="text-white/70 text-sm mt-1" data-i="process.steps.1.desc"></div>
+      </div>
+      <div class="relative glass border border-white/10 rounded-2xl p-5">
+        <div class="absolute -top-3 -left-3 w-10 h-10 rounded-2xl bg-white/10 grid place-items-center font-semibold">3</div>
+        <div class="font-semibold" data-i="process.steps.2.title"></div>
+        <div class="text-white/70 text-sm mt-1" data-i="process.steps.2.desc"></div>
+      </div>
+      <div class="relative glass border border-white/10 rounded-2xl p-5">
+        <div class="absolute -top-3 -left-3 w-10 h-10 rounded-2xl bg-white/10 grid place-items-center font-semibold">4</div>
+        <div class="font-semibold" data-i="process.steps.3.title"></div>
+        <div class="text-white/70 text-sm mt-1" data-i="process.steps.3.desc"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-2xl bg-white/10 grid place-items-center">✉️</div>
+      <h2 class="text-2xl md:text-3xl font-bold" data-i="contact.title"></h2>
+    </div>
+    <p class="text-white/70 mt-1" data-i="contact.subtitle"></p>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="glass border border-white/10 rounded-2xl p-6 space-y-3">
+        <input placeholder="Name / 姓名 / ชื่อ" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3" />
+        <input placeholder="Email" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3" />
+        <textarea placeholder="Message / 留言 / ข้อความ" class="w-full min-h-[120px] bg-white/10 border border-white/10 rounded-xl px-4 py-3"></textarea>
+        <button class="w-full rounded-2xl py-3 bg-white text-[#0b1f4a] font-semibold" data-i="contact.send"></button>
+      </div>
+      <div class="glass border border-white/10 rounded-2xl p-6 space-y-4 text-white/85">
+        <div class="font-semibold" data-i="contact.alt"></div>
+        <a class="flex items-center gap-3 hover:text-white" href="mailto:hello@altanax.co">📧 hello@altanax.co</a>
+        <a class="flex items-center gap-3 hover:text-white" href="tel:+66970397082">📞 +66 97 039 7082</a>
+        <a class="flex items-center gap-3 hover:text-white" href="https://line.me/R/ti/p/~AltanaXMCN">🔗 LINE @AltanaXMCN</a>
+        <div class="text-white/60 text-sm">Bangkok · Thailand</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm text-white/70 flex flex-col md:flex-row items-center md:justify-between gap-3">
+      <div data-i="footer.rights"></div>
+      <div class="flex gap-5">
+        <a href="#" class="hover:text-white" data-i="footer.links.0.label"></a>
+        <a href="#" class="hover:text-white" data-i="footer.links.1.label"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  const dict = {
+    th: {
+      ctaPrimary: "เริ่มต้นร่วมงาน",
+      ctaSecondary: "ดูบริการ",
+      nav: {services: "บริการ", creators: "ครีเอเตอร์", brands: "แบรนด์คู่ค้า", cases: "เคสศึกษา", process: "กระบวนการ", contact: "ติดต่อเรา"},
+      hero: {title: "เราเชื่อในพลังของครีเอเตอร์", desc: "ทีมผู้เชี่ยวชาญของเราช่วยคุณตั้งแต่กลยุทธ์ คอนเทนต์ ไปจนถึงการสร้างรายได้บน TikTok / Shopee"},
+      services: {title: "สิ่งที่เราทำ", items: [
+        {title: "การเติบโตของครีเอเตอร์", desc: "โค้ชชิ่ง 1:1, วิเคราะห์คอนเทนต์, ปรับโปรไฟล์, ระบบผลิตวิดีโอ"},
+        {title: "เชื่อมแบรนด์ & แคมเปญ", desc: "จัดหาแบรนด์, สัญญา & ค่าคอม, แคมเปญ Affiliate"},
+        {title: "โซลูชั่นอีคอมเมิร์ซ", desc: "ตั้งค่าร้าน, เลือกสินค้า, ยิงแอด, ไลฟ์อัตโนมัติ, คลังไทย/มาเลเซีย"},
+        {title: "ข้อมูลเชิงลึก & วิเคราะห์", desc: "แดชบอร์ดเรียลไทม์, KPI รายวัน, A/B ทดสอบ"}
+      ]},
+      creators: {title: "เราโฟกัสที่การเติบโตของคุณ", bullets:["คอนเทนต์บรีฟที่ทำซ้ำได้","ห้องไอเดียรายสัปดาห์","งบสนับสนุนครีเอเตอร์","ดีลแบรนด์ต่อเนื่อง"]},
+      brands: {title: "แบรนด์ที่ไว้วางใจ", desc: "จับคู่ครีเอเตอร์กับเป้าหมายแบรนด์และ ROI"},
+      cases: {title: "ผลลัพธ์ที่พิสูจน์ได้", cards:[{kpi:"+312%",label:"ยอดขาย 30 วัน",note:"หลังอัปเกรดกลยุทธ์วิดีโอ"},{kpi:"7.2x",label:"ROAS เฉลี่ย",note:"แคมเปญ Affiliate"},{kpi:"+120K",label:"ผู้ติดตามใหม่",note:"ภายใน 60 วัน"}]},
+      process: {title: "ทำงานกับเราอย่างไร", steps:[{title:"วิเคราะห์",desc:"ออดิทบัญชีและ KPI"},{title:"ออกแบบแผน",desc:"เส้นทางคอนเทนต์และตาราง"},{title:"เริ่มรัน",desc:"โปรดักชัน + แคมเปญ + Affiliate"},{title:"สเกล",desc:"เพิ่มงบจากตัวชนะ"}]},
+      contact: {title:"บอกเราเกี่ยวกับคุณ", subtitle:"ทีมงานจะติดต่อกลับภายใน 1 วันทำการ", send:"ส่งข้อความ", alt:"หรือพูดคุยผ่านช่องทางต่อไปนี้"},
+      footer:{rights:"© AltanaX MCN สงวนลิขสิทธิ์", links:[{label:"นโยบายความเป็นส่วนตัว"},{label:"เงื่อนไขการใช้บริการ"}]}
+    },
+    zh: {
+      ctaPrimary: "立即合作",
+      ctaSecondary: "查看服务",
+      nav:{services:"服务",creators:"创作者",brands:"品牌合作",cases:"案例",process:"流程",contact:"联系我们"},
+      hero:{title:"助力创作者与品牌双赢",desc:"从内容策略、店铺与带货到数据增长，交付清晰、可复用的增长系统"},
+      services:{title:"我们的服务",items:[{title:"创作者成长",desc:"一对一辅导、内容诊断、账号优化、拍摄与剪辑 SOP"},{title:"品牌与投放",desc:"品牌撮合、合同与佣金管理、活动方案与复盘"},{title:"电商解决方案",desc:"店铺搭建、选品、广告、无人直播、本地仓发货"},{title:"数据与洞察",desc:"实时看板、日级 KPI、A/B 测试"}]},
+      creators:{title:"你专注创作 · 我们负责增长",bullets:["可复用脚本库","每周选题工坊","创作者扶持预算","长期品牌合作"]},
+      brands:{title:"值得信赖的合作方",desc:"以生意结果为导向，匹配合适的达人与渠道"},
+      cases:{title:"部分成果",cards:[{kpi:"+312%",label:"30 日销售额",note:"短视频策略升级后"},{kpi:"7.2x",label:"平均 ROAS",note:"Affiliate 活动"},{kpi:"+120K",label:"新增粉丝",note:"60 天内"}]},
+      process:{title:"合作流程",steps:[{title:"诊断",desc:"账号审计与 KPI"},{title:"规划",desc:"内容路径与日程"},{title:"执行",desc:"内容+活动+带货"},{title:"放大",desc:"基于结果加码"}]},
+      contact:{title:"告诉我们你的需求",subtitle:"我们会在 1 个工作日内回复",send:"发送",alt:"也可以通过以下方式联系"},
+      footer:{rights:"© AltanaX MCN 版权所有",links:[{label:"隐私政策"},{label:"服务条款"}]}
+    },
+    en: {
+      ctaPrimary:"Start Now",
+      ctaSecondary:"Our Services",
+      nav:{services:"Services",creators:"Creators",brands:"Brands",cases:"Case Studies",process:"Process",contact:"Contact"},
+      hero:{title:"We power creator‑led commerce",desc:"From strategy and content to e‑commerce and analytics across TikTok & Shopee."},
+      services:{title:"What We Do",items:[{title:"Creator Growth",desc:"1:1 coaching, content audits, profile optimization"},{title:"Brand & Campaigns",desc:"Sourcing brands, contracts & commissions, affiliate ops"},{title:"E‑commerce Ops",desc:"Store setup, product selection, ads, auto‑live, TH/MY warehouses"},{title:"Insights & Analytics",desc:"Realtime dashboards, daily KPIs, A/B tests"}]},
+      creators:{title:"You create, we scale",bullets:["Reusable briefs","Weekly idea labs","Creator support budget","Ongoing brand deals"]},
+      brands:{title:"Trusted by brands",desc:"We match the right creators to your objectives and ROI."},
+      cases:{title:"Outcomes",cards:[{kpi:"+312%",label:"30‑day sales",note:"After short‑video playbook"},{kpi:"7.2x",label:"Avg. ROAS",note:"Affiliate campaigns"},{kpi:"+120K",label:"New followers",note:"Within 60 days"}]},
+      process:{title:"How We Work",steps:[{title:"Audit",desc:"Account & KPIs"},{title:"Plan",desc:"Content path & calendar"},{title:"Launch",desc:"Production + campaigns + affiliate"},{title:"Scale",desc:"Double down on winners"}]},
+      contact:{title:"Tell us about you",subtitle:"We respond within 1 business day",send:"Send",alt:"Or reach us via"},
+      footer:{rights:"© AltanaX MCN. All rights reserved.",links:[{label:"Privacy"},{label:"Terms"}]}
+    }
+  };
+  function setLang(code){
+    const d = dict[code] || dict.zh;
+    document.querySelectorAll('[data-i]').forEach(el=>{
+      const key = el.getAttribute('data-i');
+      const val = key.split('.').reduce((o,k)=>o&&o[k], d);
+      if(!val) return;
+      el.textContent = val;
+    });
+    document.querySelectorAll('header button').forEach(btn=>{
+      btn.classList.remove('bg-white','text-[#0b1f4a]');
+      if(btn.textContent===code.toUpperCase()) btn.classList.add('bg-white','text-[#0b1f4a]');
+    });
+  }
+  setLang('zh');
+  </script>
+</body>
+</html>
