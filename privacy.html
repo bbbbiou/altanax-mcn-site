@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy · AltanaX MCN</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass{background:rgba(255,255,255,.06);backdrop-filter:saturate(120%) blur(8px)}
+    .grad{background:linear-gradient(180deg,#0a1027 0%,#0b1f4a 100%)}
+  </style>
+</head>
+<body class="text-white grad min-h-screen">
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 border-b border-white/10 glass">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="font-semibold tracking-wide">AltanaX MCN</a>
+      <div class="flex items-center gap-1 bg-white/10 rounded-2xl p-1">
+        <button class="px-3 py-1 rounded-2xl text-sm" onclick="setLang('th')">TH</button>
+        <button class="px-3 py-1 rounded-2xl text-sm" onclick="setLang('zh')">ZH</button>
+        <button class="px-3 py-1 rounded-2xl text-sm" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-4" data-i="title"></h1>
+    <p class="text-white/80 mb-6" data-i="intro"></p>
+
+    <section class="space-y-6">
+      <div class="glass rounded-2xl p-5 border border-white/10">
+        <h2 class="text-xl font-semibold mb-2" data-i="sec1.title"></h2>
+        <ul class="list-disc pl-5 text-white/85 space-y-1">
+          <li data-i="sec1.li1"></li>
+          <li data-i="sec1.li2"></li>
+          <li data-i="sec1.li3"></li>
+        </ul>
+      </div>
+
+      <div class="glass rounded-2xl p-5 border border-white/10">
+        <h2 class="text-xl font-semibold mb-2" data-i="sec2.title"></h2>
+        <p class="text-white/85" data-i="sec2.p1"></p>
+      </div>
+
+      <div class="glass rounded-2xl p-5 border border-white/10">
+        <h2 class="text-xl font-semibold mb-2" data-i="sec3.title"></h2>
+        <p class="text-white/85" data-i="sec3.p1"></p>
+      </div>
+
+      <div class="glass rounded-2xl p-5 border border-white/10">
+        <h2 class="text-xl font-semibold mb-2" data-i="sec4.title"></h2>
+        <p class="text-white/85">
+          <span data-i="sec4.addr"></span><br/>
+          Email: <a class="underline" href="mailto:altanax@tryaltana.com">altanax@tryaltana.com</a><br/>
+          LINE: @909jqglg
+        </p>
+      </div>
+    </section>
+
+    <p class="text-white/60 text-sm mt-8" data-i="update"></p>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4 py-8 text-sm text-white/70 flex items-center justify-between">
+      <a class="hover:text-white" href="/">← Home</a>
+      <span>© AltanaX MCN</span>
+    </div>
+  </footer>
+
+  <script>
+  const dict = {
+    th: {
+      title: "นโยบายความเป็นส่วนตัว",
+      intro: "เราเคารพความเป็นส่วนตัวของคุณ เอกสารนี้อธิบายว่าข้อมูลใดที่เราเก็บ ใช้อย่างไร และสิทธิของคุณมีอะไรบ้าง",
+      sec1:{title:"ข้อมูลที่เราเก็บ",li1:"ข้อมูลการติดต่อ เช่น ชื่อ อีเมล เบอร์โทร",li2:"เนื้อหาที่คุณส่งผ่านแบบฟอร์มในเว็บไซต์",li3:"ข้อมูลเทคนิคสำหรับการวิเคราะห์แบบรวม (เช่น หน้า/อุปกรณ์/เบราว์เซอร์)"},
+      sec2:{title:"เรานำข้อมูลไปใช้อย่างไร",p1:"ใช้เพื่อตอบกลับคำถาม ให้บริการลูกค้า ส่งข้อมูลที่เกี่ยวข้อง และปรับปรุงประสบการณ์ใช้งาน เราไม่ขายข้อมูลของคุณให้บุคคลที่สาม"},
+      sec3:{title:"การเก็บรักษาและความปลอดภัย",p1:"เราจัดเก็บข้อมูลในโครงสร้างพื้นฐานที่เชื่อถือได้และจำกัดการเข้าถึง เฉพาะผู้มีความจำเป็นในการทำงานเท่านั้น"},
+      sec4:{title:"ติดต่อเรา",addr:"ที่อยู่: 559/122, Soi Nonsi 20, Chong Nonsi, Yan Nawa, Bangkok, 10120, Thailand"},
+      update:"ปรับปรุงล่าสุด: 2025-09-10"
+    },
+    zh: {
+      title:"隐私政策",
+      intro:"我们重视并保护您的隐私。本文说明我们收集哪些信息、如何使用以及您的权利。",
+      sec1:{title:"我们收集的信息",li1:"联系方式（如姓名、邮箱、电话）",li2:"您通过网站表单提交的内容",li3:"用于聚合分析的技术信息（如访问页面/设备/浏览器）"},
+      sec2:{title:"我们如何使用",p1:"用于回复咨询、提供客户服务、发送相关资讯以及改进体验。我们不会出售您的个人信息。"},
+      sec3:{title:"存储与安全",p1:"我们将数据存放在可靠的基础设施中，并仅向履行职责所需的人员开放访问。"},
+      sec4:{title:"联系我们",addr:"地址：559/122, Soi Nonsi 20, Chong Nonsi, Yan Nawa, Bangkok, 10120, Thailand"},
+      update:"最后更新：2025-09-10"
+    },
+    en: {
+      title:"Privacy Policy",
+      intro:"We respect your privacy. This page explains what we collect, how we use it, and your rights.",
+      sec1:{title:"Data We Collect",li1:"Contact details (name, email, phone)",li2:"Content you submit via our web forms",li3:"Technical/analytics data in aggregate (pages/devices/browsers)"},
+      sec2:{title:"How We Use It",p1:"To respond to inquiries, provide support, send relevant updates, and improve our services. We do not sell your personal data."},
+      sec3:{title:"Storage & Security",p1:"Data is stored on trusted infrastructure with access limited to personnel who need it for work."},
+      sec4:{title:"Contact Us",addr:"Address: 559/122, Soi Nonsi 20, Chong Nonsi, Yan Nawa, Bangkok, 10120, Thailand"},
+      update:"Last updated: 2025-09-10"
+    }
+  };
+  function setLang(code){
+    const d = dict[code] || dict.th;
+    document.querySelectorAll('[data-i]').forEach(el=>{
+      const key = el.getAttribute('data-i');
+      const val = key.split('.').reduce((o,k)=>o&&o[k], d);
+      if(val) el.textContent = val;
+    });
+    document.querySelectorAll('header button').forEach(b=>{
+      b.classList.remove('bg-white','text-[#0b1f4a]');
+      if(b.textContent===code.toUpperCase()) b.classList.add('bg-white','text-[#0b1f4a]');
+    });
+  }
+  setLang('th');
+  </script>
+</body>
+</html>
