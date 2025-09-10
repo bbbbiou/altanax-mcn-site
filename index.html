@@ -16,29 +16,12 @@
 </head>
 <body class="text-white grad min-h-screen">
   <!-- NAV -->
-  <!-- 左侧表单（替换原来的整块） -->
-<div class="glass border border-white/10 rounded-2xl p-6 space-y-3 relative z-10">
-  <form id="contactForm" class="space-y-3">
-    <input name="name" required
-      placeholder="Name / 姓名 / ชื่อ"
-      class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3" />
-
-    <input name="email" type="email" required
-      placeholder="Email"
-      class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3" />
-
-    <textarea name="message" required
-      placeholder="Message / 留言 / ข้อความ"
-      class="w-full min-h-[120px] bg-white/10 border border-white/10 rounded-xl px-4 py-3"></textarea>
-
-    <button type="submit"
-      class="w-full rounded-2xl py-3 bg-white text-[#0b122f] font-semibold" data-i="contact.send">
-      发送
-    </button>
-
-    <p id="formHint" class="text-sm text-white/70 mt-2"></p>
-  </form>
-</div>
+  <header class="sticky top-0 z-50 border-b border-white/10 glass">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-blue-500 to-purple-400 grid place-items-center shadow-lg">🚀</div>
+        <span class="font-semibold tracking-wide">AltanaX MCN</span>
+      </div>
       <nav class="hidden md:flex items-center gap-6 text-sm text-white/80">
         <a href="#services" class="hover:text-white" data-i="nav.services"></a>
         <a href="#creators" class="hover:text-white" data-i="nav.creators"></a>
@@ -208,12 +191,31 @@
     </div>
     <p class="text-white/70 mt-1" data-i="contact.subtitle"></p>
     <div class="mt-6 grid md:grid-cols-2 gap-6">
-      <div class="glass border border-white/10 rounded-2xl p-6 space-y-3">
-        <input placeholder="Name / 姓名 / ชื่อ" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3" />
-        <input placeholder="Email" class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3" />
-        <textarea placeholder="Message / 留言 / ข้อความ" class="w-full min-h-[120px] bg-white/10 border border-white/10 rounded-xl px-4 py-3"></textarea>
-        <button class="w-full rounded-2xl py-3 bg-white text-[#0b122f] font-semibold" data-i="contact.send"></button>
+      <!-- 左侧真正的表单 -->
+      <div class="glass border border-white/10 rounded-2xl p-6 space-y-3 relative z-10">
+        <form id="contactForm" class="space-y-3">
+          <input name="name" required
+            placeholder="Name / 姓名 / ชื่อ"
+            class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3" />
+
+          <input name="email" type="email" required
+            placeholder="Email"
+            class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3" />
+
+          <textarea name="message" required
+            placeholder="Message / 留言 / ข้อความ"
+            class="w-full min-h-[120px] bg-white/10 border border-white/10 rounded-xl px-4 py-3"></textarea>
+
+          <button type="submit"
+            class="w-full rounded-2xl py-3 bg-white text-[#0b122f] font-semibold" data-i="contact.send">
+            发送
+          </button>
+
+          <p id="formHint" class="text-sm text-white/70 mt-2"></p>
+        </form>
       </div>
+
+      <!-- 右侧联系方式 -->
       <div class="glass border border-white/10 rounded-2xl p-6 space-y-4 text-white/85">
         <div class="font-semibold" data-i="contact.alt"></div>
         <a class="flex items-center gap-3 hover:text-white" href="mailto:altanax@tryaltana.com">📧 altanax@tryaltana.com</a>
@@ -234,6 +236,7 @@
     </div>
   </footer>
 
+  <!-- 多语言字典 & 切换 -->
   <script>
   const dict = {
     th: {
@@ -282,6 +285,7 @@
     }
   };
   function setLang(code){
+    window.currentLang = code; // 让提交脚本能拿到当前语言
     const d = dict[code] || dict.zh;
     document.querySelectorAll('[data-i]').forEach(el=>{
       const key = el.getAttribute('data-i');
@@ -295,6 +299,44 @@
     });
   }
   setLang('zh');
+  </script>
+
+  <!-- 提交脚本（务必放在最后，确保能找到表单） -->
+  <script>
+    let currentLang = window.currentLang || 'zh';
+
+    const form = document.getElementById('contactForm');
+    const hint = document.getElementById('formHint');
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        hint.textContent = '发送中…';
+
+        const data = Object.fromEntries(new FormData(form).entries());
+        data.lang = window.currentLang || currentLang;
+
+        try {
+          const r = await fetch('/api/line-message', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+          const json = await r.json().catch(() => ({}));
+
+          if (r.ok && json.ok !== false) {
+            hint.textContent = '已发送到 LINE ✅';
+            form.reset();
+          } else {
+            hint.textContent = '发送失败，请稍后再试。';
+            console.error('submit error', json);
+          }
+        } catch (err) {
+          hint.textContent = '网络异常，稍后重试。';
+          console.error(err);
+        }
+      });
+    }
   </script>
 </body>
 </html>
