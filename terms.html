@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Service · AltanaX MCN</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .glass{background:rgba(255,255,255,.06);backdrop-filter:saturate(120%) blur(8px)}
+    .grad{background:linear-gradient(180deg,#0a1027 0%,#0b1f4a 100%)}
+  </style>
+</head>
+<body class="text-white grad min-h-screen">
+  <header class="sticky top-0 z-50 border-b border-white/10 glass">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="font-semibold tracking-wide">AltanaX MCN</a>
+      <div class="flex items-center gap-1 bg-white/10 rounded-2xl p-1">
+        <button class="px-3 py-1 rounded-2xl text-sm" onclick="setLang('th')">TH</button>
+        <button class="px-3 py-1 rounded-2xl text-sm" onclick="setLang('zh')">ZH</button>
+        <button class="px-3 py-1 rounded-2xl text-sm" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <h1 class="text-3xl font-bold mb-4" data-i="title"></h1>
+    <p class="text-white/80 mb-6" data-i="intro"></p>
+
+    <div class="space-y-6">
+      <div class="glass rounded-2xl p-5 border border-white/10">
+        <h2 class="text-xl font-semibold mb-2" data-i="s1.title"></h2>
+        <p class="text-white/85" data-i="s1.p"></p>
+      </div>
+      <div class="glass rounded-2xl p-5 border border-white/10">
+        <h2 class="text-xl font-semibold mb-2" data-i="s2.title"></h2>
+        <p class="text-white/85" data-i="s2.p"></p>
+      </div>
+      <div class="glass rounded-2xl p-5 border border-white/10">
+        <h2 class="text-xl font-semibold mb-2" data-i="s3.title"></h2>
+        <p class="text-white/85" data-i="s3.p"></p>
+      </div>
+      <div class="glass rounded-2xl p-5 border border-white/10">
+        <h2 class="text-xl font-semibold mb-2" data-i="s4.title"></h2>
+        <p class="text-white/85" data-i="s4.p"></p>
+      </div>
+    </div>
+
+    <p class="text-white/60 text-sm mt-8" data-i="update"></p>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4 py-8 text-sm text-white/70 flex items-center justify-between">
+      <a class="hover:text-white" href="/">← Home</a>
+      <span>© AltanaX MCN</span>
+    </div>
+  </footer>
+
+  <script>
+  const dict = {
+    th:{
+      title:"เงื่อนไขการใช้บริการ",
+      intro:"โปรดอ่านเงื่อนไขต่อไปนี้ก่อนใช้งานเว็บไซต์/บริการของเรา การใช้งานต่อไปแสดงว่าคุณยอมรับเงื่อนไขทั้งหมด",
+      s1:{title:"การใช้งานที่ยอมรับได้",p:"คุณตกลงจะไม่ใช้เว็บไซต์เพื่อกิจกรรมที่ผิดกฎหมาย ละเมิดสิทธิ หรือสร้างความเสียหายต่อผู้อื่น"},
+      s2:{title:"ทรัพย์สินทางปัญญา",p:"เนื้อหา/โลโก้/เครื่องหมายการค้าบนเว็บไซต์นี้เป็นของ AltanaX MCN หรือผู้ถือสิทธิ เราสงวนสิทธิทั้งหมด"},
+      s3:{title:"การจำกัดความรับผิด",p:"เราพยายามให้ข้อมูลถูกต้อง แต่อาจมีข้อผิดพลาด เราไม่รับผิดชอบความเสียหายทางอ้อมจากการใช้งานเว็บไซต์"},
+      s4:{title:"กฎหมายที่ใช้บังคับ",p:"ข้อกำหนดนี้อยู่ภายใต้กฎหมายของประเทศไทย ข้อพิพาทให้ศาลไทยมีเขตอำนาจ"},
+      update:"ปรับปรุงล่าสุด: 2025-09-10"
+    },
+    zh:{
+      title:"服务条款",
+      intro:"在使用我们的网站/服务前请仔细阅读。继续使用即表示您同意以下全部条款。",
+      s1:{title:"可接受的使用",p:"您不得将本网站用于违法、侵权或损害他人的活动。"},
+      s2:{title:"知识产权",p:"本网站上的内容/标识/商标归 AltanaX MCN 或权利人所有，保留所有权利。"},
+      s3:{title:"责任限制",p:"我们力求信息准确，但不对因使用本网站而产生的任何间接损失承担责任。"},
+      s4:{title:"适用法律",p:"本条款受泰王国法律管辖，争议由泰国法院管辖。"},
+      update:"最后更新：2025-09-10"
+    },
+    en:{
+      title:"Terms of Service",
+      intro:"Please read these terms carefully. By continuing to use our site/services, you agree to all terms below.",
+      s1:{title:"Acceptable Use",p:"You agree not to use this site for unlawful, infringing, or harmful activities."},
+      s2:{title:"Intellectual Property",p:"All content, logos, and trademarks are owned by AltanaX MCN or licensors. All rights reserved."},
+      s3:{title:"Limitation of Liability",p:"We strive for accuracy but are not liable for indirect damages arising from use of this site."},
+      s4:{title:"Governing Law",p:"These terms are governed by the laws of Thailand. Disputes are subject to Thai courts."},
+      update:"Last updated: 2025-09-10"
+    }
+  };
+  function setLang(code){
+    const d = dict[code] || dict.th;
+    document.querySelectorAll('[data-i]').forEach(el=>{
+      const key = el.getAttribute('data-i');
+      const val = key.split('.').reduce((o,k)=>o&&o[k], d);
+      if(val) el.textContent = val;
+    });
+    document.querySelectorAll('header button').forEach(b=>{
+      b.classList.remove('bg-white','text-[#0b1f4a]');
+      if(b.textContent===code.toUpperCase()) b.classList.add('bg-white','text-[#0b1f4a]');
+    });
+  }
+  setLang('th');
+  </script>
+</body>
+</html>
