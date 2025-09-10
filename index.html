@@ -16,12 +16,29 @@
 </head>
 <body class="text-white grad min-h-screen">
   <!-- NAV -->
-  <header class="sticky top-0 z-50 border-b border-white/10 glass">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-2xl bg-gradient-to-tr from-blue-500 to-purple-400 grid place-items-center shadow-lg">🚀</div>
-        <span class="font-semibold tracking-wide">AltanaX MCN</span>
-      </div>
+  <!-- 左侧表单（替换原来的整块） -->
+<div class="glass border border-white/10 rounded-2xl p-6 space-y-3 relative z-10">
+  <form id="contactForm" class="space-y-3">
+    <input name="name" required
+      placeholder="Name / 姓名 / ชื่อ"
+      class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3" />
+
+    <input name="email" type="email" required
+      placeholder="Email"
+      class="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3" />
+
+    <textarea name="message" required
+      placeholder="Message / 留言 / ข้อความ"
+      class="w-full min-h-[120px] bg-white/10 border border-white/10 rounded-xl px-4 py-3"></textarea>
+
+    <button type="submit"
+      class="w-full rounded-2xl py-3 bg-white text-[#0b122f] font-semibold" data-i="contact.send">
+      发送
+    </button>
+
+    <p id="formHint" class="text-sm text-white/70 mt-2"></p>
+  </form>
+</div>
       <nav class="hidden md:flex items-center gap-6 text-sm text-white/80">
         <a href="#services" class="hover:text-white" data-i="nav.services"></a>
         <a href="#creators" class="hover:text-white" data-i="nav.creators"></a>
